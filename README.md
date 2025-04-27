@@ -1,6 +1,6 @@
 # Wi-Fi Security Auditing Tool
 
-A simple project designed for educational and authorized testing purposes. This tool allows you to scan Wi-Fi networks, capture WPA/WPA2 handshakes, launch deauthentication attacks, crack captured handshakes, and detect rogue access points.
+A simple project designed for educational and authorized testing purposes. This tool allows you to scan Wi-Fi networks, capture WPA/WPA2 handshakes, launch deauthentication attacks, crack captured handshakes, and detect rogue access points. Work with Jared Robinson.
 
 ## Feature
 - Network Scanner	| Scans and lists nearby Wi-Fi networks
