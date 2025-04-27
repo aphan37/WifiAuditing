@@ -14,13 +14,7 @@ A simple project designed for educational and authorized testing purposes. This 
 ![image](https://github.com/user-attachments/assets/b7c4ddfb-ecd2-45d3-8c44-0e750a8e71f0)
 
 ## Implement Tools
-Component | Tool/Library | Purpose
-Programming Language | Python 3.8+ | Main logic and control
-Packet Capture / Injection | Scapy | Build and sniff 802.11 packets
-Password Cracking | Aircrack-ng | WPA/WPA2 handshake cracking
-Monitor Mode Management | ifconfig / iwconfig (Linux CLI) | Enable monitor mode on Wi-Fi interface
-Hardware | USB Wi-Fi Adapter with Monitor Mode | Required for packet injection/sniffing
-Virtual Machine (Optional) | VirtualBox or VMware | Host Kali Linux environment on Windows
+![image](https://github.com/user-attachments/assets/bba8790b-9dab-457b-bab7-8b3910160b85)
 
 ## Setup Process
 📋 Setup Process
@@ -28,9 +22,11 @@ Virtual Machine (Optional) | VirtualBox or VMware | Host Kali Linux environment 
 - Connect external Wi-Fi USB adapter
 - Pass adapter to Kali (in VM settings)
 - Update system packages: sudo apt update && sudo apt upgrade
+
 - Install required tools:
 + sudo apt install aircrack-ng python3-pip
 + pip3 install scapy pywifi
+
 - Set Wi-Fi adapter to monitor mode:
 + sudo ifconfig wlan0 down
 + sudo iwconfig wlan0 mode monitor
