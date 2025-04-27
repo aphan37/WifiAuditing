@@ -19,13 +19,13 @@ A simple project designed for educational and authorized testing purposes. This 
 ## Setup Process
 1. Install Kali Linux (VM or Dual Boot). Connect external Wi-Fi USB adapter. Pass adapter to Kali (in VM settings). Update system packages: sudo apt update && sudo apt upgrade
 2. Install required tools:
-   | sudo apt install aircrack-ng python3-pip
-   | pip3 install scapy pywifi
+- sudo apt install aircrack-ng python3-pip
+- pip3 install scapy pywifi
 
 3. Set Wi-Fi adapter to monitor mode:
-   | sudo ifconfig wlan0 down
-   | sudo iwconfig wlan0 mode monitor
-   | sudo ifconfig wlan0 up
+- sudo ifconfig wlan0 down
+- sudo iwconfig wlan0 mode monitor
+- sudo ifconfig wlan0 up
 
 ## Mechanism
 - scanner.py identifies all nearby Wi-Fi networks
