@@ -1,3 +1,5 @@
+# === wifi_auditor/handshake_capture.py ===
+from scapy.all import *
 def capture_handshake(interface, target_bssid):
     print("[*] Listening for handshake packets...")
 
