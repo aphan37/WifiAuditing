@@ -34,3 +34,8 @@ A simple project designed for educational and authorized testing purposes. This 
 - Handshake saved into captures/ folder as .pcap
 - cracker.py automatically starts dictionary attack on captured handshake
 - If rogue APs are detected, alert user
+
+## Legal Disclaimer
+This tool is intended only for educational purposes and authorized security testing.
+Unauthorized use on networks without permission is illegal and unethical.
+Always perform penetration testing activities with explicit permission.
