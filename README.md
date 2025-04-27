@@ -11,21 +11,7 @@ A simple project designed for educational and authorized testing purposes. This 
 - Auto Modes	| Optional full-auto scanning, attacking, and cracking
 
 ## Structure
-wifi_auditor/
-├── main.py                  # Main runner script (ties all modules together)
-├── scanner.py                # Wi-Fi network scanning module
-├── handshake_capture.py      # Handshake capturing module
-├── deauth_attack.py          # Deauthentication attack module
-├── cracker.py                # Handshake cracking module
-├── rogue_detector.py         # Rogue AP detection module
-├── utils/                    # Helper functions
-│   ├── network_utils.py      # Monitor mode, MAC address functions
-│   └── packet_utils.py       # Packet building, parsing helpers
-├── wordlists/                # Password wordlists (e.g., rockyou.txt)
-├── captures/                 # Saved handshake .pcap files
-├── README.md                 # Project documentation
-├── requirements.txt          # Python library dependencies
-└── setup_kali_vm.md          # Guide for setting up Kali Linux (VM)
+![image](https://github.com/user-attachments/assets/b7c4ddfb-ecd2-45d3-8c44-0e750a8e71f0)
 
 ## Implement Tools
 Component | Tool/Library | Purpose
