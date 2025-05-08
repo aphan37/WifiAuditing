@@ -3,7 +3,7 @@ from scapy.all import *
 
 known_networks = {}
 
-
+# Funnction responsible for identifying rogue access points
 def rogue_detector(packet):
     if packet.haslayer(Dot11Beacon):
         ssid = packet[Dot11Elt].info.decode(errors='ignore')
