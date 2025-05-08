@@ -1,8 +1,34 @@
 # Wi-Fi Security Auditing Tool
 
-A simple project designed for educational and authorized testing purposes. This tool allows you to scan Wi-Fi networks, capture WPA/WPA2 handshakes, launch deauthentication attacks, crack captured handshakes, and detect rogue access points. Work with Jared Robinson.
+A simple project designed for educational and authorized testing purposes. This tool allows you to scan Wi-Fi networks, capture WPA/WPA2 handshakes, launch deauthentication attacks, crack captured handshakes, and detect rogue access points. Work with Jared Robinson and Dawn Marshall.
 
-## Feature
+## Purpose
+This Wi-Fi Security Auditing Tool demonstrates real-world wireless security auditing techniques. The goal of this project is to simulate a controlled penetration testing environment for education and research purposes. It mainly showcases how Python can bridge CLI tools like aircrack-ng with automated workflows.
+
+## Setup
+Clone and set up the project on Kali Linux virtual machine or a compatible Linux distro.
+```
+git clone https://github.com/aphan37/WifiAuditing.git
+cd WifiAuditing
+sudo apt update && sudo apt install aircrack-ng python3-pip python3-venv
+pip install scapy pywifi
+```
+Download and unzip a sample .cap file for testing cracking functionality.
+```
+wget https://github.com/aircrack-ng/aircrack-ng/raw/master/test/wpa.cap
+sudo gzip -d /usr/share/wordlists/rockyou.txt.gz
+aircrack-ng wpa.cap -w /usr/share/wordlists/rockyou.txt
+```
+
+## Technical Details
+- Scanning: Utilizes pywifi or scapy to list available SSIDs through signal strength, encryption type, and MAC addresses.
+- Handshake Capture: Passive and active methods using monitor mode and deauthentication packets (aircrack-ng or scapy).
+- Cracking: Automates dictionary attacks using aircrack-ng, referencing wordlists (rockyou.txt).
+- Interface Handling: Shell commands like ifconfig and iwconfig manage interface modes.
+- Rogue AP Detection: Analyzes anomalies in SSID broadcasting frequency or strength to warn about fake APs.
+
+
+## Features
 - Network Scanner	| Scans and lists nearby Wi-Fi networks
 - Handshake Capturer	| Captures WPA/WPA2 authentication handshakes
 - Deauthentication | Attack	Forces devices to reconnect to capture handshakes
@@ -16,24 +42,11 @@ A simple project designed for educational and authorized testing purposes. This 
 ## Implement Tools
 ![image](https://github.com/user-attachments/assets/bba8790b-9dab-457b-bab7-8b3910160b85)
 
-## Setup Process
-1. Install Kali Linux (VM or Dual Boot). Connect external Wi-Fi USB adapter. Pass adapter to Kali (in VM settings). Update system packages: sudo apt update && sudo apt upgrade
-2. Install required tools:
-- sudo apt install aircrack-ng python3-pip
-- pip3 install scapy pywifi
-
-3. Set Wi-Fi adapter to monitor mode:
-- sudo ifconfig wlan0 down
-- sudo iwconfig wlan0 mode monitor
-- sudo ifconfig wlan0 up
-
-## Mechanism
-- scanner.py identifies all nearby Wi-Fi networks
-- User selects a target (or tool picks strongest automatically)
-- handshake_capture.py captures WPA/WPA2 handshake (passive and/or active deauth)
-- Handshake saved into captures/ folder as .pcap
-- cracker.py automatically starts dictionary attack on captured handshake
-- If rogue APs are detected, alert user
+## Novelty
+This project merges manual CLI tools with Python to offer an automated auditing pipeline. Future improvements could include:
+* GUI dashboard
+* AI-based rogue AP classification
+* Expanded cracking strategies
 
 ## Legal Disclaimer
 This tool is intended only for educational purposes and authorized security testing.
