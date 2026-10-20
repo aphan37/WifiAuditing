@@ -1,0 +1,16 @@
+# Captured handshakes and generated artifacts
+captures/
+*.pcap
+*.cap
+
+# Wordlists are large and usually downloaded locally, not committed
+wordlists/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# OS
+.DS_Store

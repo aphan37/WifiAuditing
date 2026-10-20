@@ -1,0 +1,9 @@
+# Core packet crafting/sniffing library used by scanner.py, rogue_detector.py,
+# handshake_capture.py, packet_utils.py and deauth_attack.py
+scapy>=2.5
+
+# Note: aircrack-ng (used by cracker.py via subprocess) is a system package,
+# not a Python package. Install it with:
+#   sudo apt update && sudo apt install aircrack-ng
+#
+# Requires root privileges and a wireless adapter that supports monitor mode.
